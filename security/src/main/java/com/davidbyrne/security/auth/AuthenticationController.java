@@ -12,22 +12,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 //this class used for 2 endpoint. one for registering and one for authenticating
 public class AuthenticationController {
+    private final AuthenticationService service;
 
     @PostMapping("/register")
     public ResponseEntity<AuthenticationResponse> register (
             @RequestBody RegisterRequest request){ //RegisterRequest will hold registration information like first name, last name, email and password
-        //implement later
-
-
+        return ResponseEntity.ok((service.register(request)));
     }
 
     @PostMapping("/authenticate")
     public ResponseEntity<AuthenticationResponse> register (
             @RequestBody AuthenticationRequest request){
-        //implement later
-
-
+        return ResponseEntity.ok((service.authenticate(request)));
     }
-
-
 }

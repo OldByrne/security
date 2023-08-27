@@ -21,6 +21,7 @@ public class JwtService {
 
     //constant variable that can only be accessed from within this class
     private static final String SECRET_KEY = "404d83f73f29e9aea034ceea39a231ac1a40f87339d878fd59a62930b4671619";
+    //private static final String SECRET_KEY = String.valueOf(Keys.secretKeyFor(SignatureAlgorithm.ES512));
 
 
     public String extractUsername(String token) {

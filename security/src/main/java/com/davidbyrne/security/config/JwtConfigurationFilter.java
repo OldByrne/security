@@ -67,4 +67,5 @@ public class JwtConfigurationFilter extends OncePerRequestFilter {
         filterChain.doFilter(request, response); //after the above "if", passing on to the next filter to be executed
     }
 
+
 }
